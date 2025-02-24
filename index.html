@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Pass Requisition Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #ddd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .center-text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="center-text">Employee Pass Requisition Form</h2>
+
+        <form action="https://formspree.io/f/mwpvjdbo" method="POST">
+            
+            <table>
+                <tr>
+                    <th colspan="2">Employee Details</th>
+                </tr>
+                <tr>
+                    <td><label for="company">Name of Company:</label></td>
+                    <td><input type="text" id="company" name="company" required></td>
+                </tr>
+                <tr>
+                    <td><label for="emp_name">Employee Name:</label></td>
+                    <td><input type="text" id="emp_name" name="emp_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="preferred_name">Preferred Name:</label></td>
+                    <td><input type="text" id="preferred_name" name="preferred_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="emp_no">Employee No.:</label></td>
+                    <td><input type="text" id="emp_no" name="emp_no" required></td>
+                </tr>
+                <tr>
+                    <td><label for="designation">Designation:</label></td>
+                    <td><input type="text" id="designation" name="designation" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nric">NRIC No.:</label></td>
+                    <td><input type="text" id="nric" name="nric" required></td>
+                </tr>
+                <tr>
+                    <td><label for="department">Department:</label></td>
+                    <td><input type="text" id="department" name="department" required></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Reason(s)</th>
+                </tr>
+                <tr>
+                    <td>Newly Joined</td>
+                    <td>NIL</td>
+                    <td><input type="radio" name="pass_type" value="newly_joined"></td>
+                </tr>
+                <tr>
+                    <td>1st Replacement</td>
+                    <td>RM5.00</td>
+                    <td><input type="radio" name="pass_type" value="1st_replacement"></td>
+                </tr>
+                <tr>
+                    <td>2nd Replacement</td>
+                    <td>RM10.00</td>
+                    <td><input type="radio" name="pass_type" value="2nd_replacement"></td>
+                </tr>
+                <tr>
+                    <td>Damage</td>
+                    <td>Specify Below</td>
+                    <td><input type="radio" name="pass_type" value="damage"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><label for="damage_reason">If damaged, specify reason:</label> <input type="text" id="damage_reason" name="damage_reason"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th colspan="2">Payment & Processing</th>
+                </tr>
+                <tr>
+                    <td><label for="amount_received">Amount Received:</label></td>
+                    <td><input type="text" id="amount_received" name="amount_received"></td>
+                </tr>
+                <tr>
+                    <td><label for="card_received_on">Card Received On:</label></td>
+                    <td><input type="date" id="card_received_on" name="card_received_on"></td>
+                </tr>
+                <tr>
+                    <td><label for="date_received">Date Received:</label></td>
+                    <td><input type="date" id="date_received" name="date_received"></td>
+                </tr>
+                <tr>
+                    <td><label for="received_by">Received By:</label></td>
+                    <td><input type="text" id="received_by" name="received_by"></td>
+                </tr>
+                <tr>
+                    <td><label for="card_issue_date">Card Issued On:</label></td>
+                    <td><input type="date" id="card_issue_date" name="card_issue_date"></td>
+                </tr>
+                <tr>
+                    <td><label for="payment_date">Payment to Accounts Department on:</label></td>
+                    <td><input type="date" id="payment_date" name="payment_date"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th colspan="2">Signatures</th>
+                </tr>
+                <tr>
+                    <td><label for="employee_signature">Employee Signature:</label></td>
+                    <td><input type="text" id="employee_signature" name="employee_signature"></td>
+                </tr>
+            </table>
+
+            <button type="submit">Submit Form</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
